@@ -1,0 +1,25 @@
+{
+  "name": "random-video-chat-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend server for random 1-to-1 video chat using Socket.IO and WebRTC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "webrtc",
+    "socket.io",
+    "video-chat",
+    "matchmaking"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
+}
+
