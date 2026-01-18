@@ -1,13 +1,20 @@
-import { useState } from 'react';
-import VideoChat from './VideoChat';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import RandomChat from './pages/RandomChat';
+import CreateRoom from './pages/CreateRoom';
+import VideoRoom from './pages/VideoRoom';
 import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <h1>Random Video Chat</h1>
-      <VideoChat />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/random" element={<RandomChat />} />
+        <Route path="/create-room" element={<CreateRoom />} />
+        <Route path="/room/:roomId" element={<VideoRoom />} />
+      </Routes>
+    </Router>
   );
 }
 
